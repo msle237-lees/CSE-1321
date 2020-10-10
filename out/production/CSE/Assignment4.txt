@@ -1,0 +1,83 @@
+/*
+Name: Michael Lees
+Date: 09-21-2020
+Assignment: Assignment4A
+*/
+
+MAIN
+  CREATE seed_1 (int)
+  CREATE seed_2 (int)
+  CREATE seed_3 (int)
+  CREATE iterations (int)
+  CREATE sum (int)
+  CREATE sum_array (array)
+  PRINT "Enter seed 1: "
+  READ seed_1
+  PRINT "Enter seed 2: "
+  READ seed_2
+  PRINT "Number of iterations: "
+  READ iterations
+
+  CREATE list_of_seed (empty list)
+  list_of_seed[0] = seed_1
+  list_of_seed[1] = seed_2
+  list_of_seed[2] = seed_3
+
+  FOR (int i = 3, i < iterations + 2, i++) than
+    seed = list_of_seed[i-1] + list_of_seed[i-2]
+    list_of_seed[i] = seed
+
+  PRINT list_of_seed
+END MAIN
+
+/*
+Name: Michael Lees
+Date: 09-21-2020
+Assignment: Assignment4B
+*/
+
+MAIN
+  CREATE size (int)
+  PRINT Size:
+  READ size
+  FOR (int i = 0, i < size, i++) THEN
+    IF (i > 0) THEN
+      FOR (int j = 0, j < i, j++) THEN
+        PRINT "   " (prints 3 spaces)
+      END FOR
+    END IF
+    FOR (int h = 0, h < size, h++) THEN
+      PRINT h + "  "
+    END FOR
+    PRINTLINE
+    size = size - 1
+END MAIN
+
+/*
+Name: Michael Lees
+Date: 09-27-2020
+Assignment: Assignment4C
+*/
+
+MAIN
+  CREATE WIDTH
+  PRINT "Width: "
+  READ WIDTH
+  FOR (int i = 0, i < width, i++) THEN
+    PRINT "* "
+  END FOR
+  PRINTLINE
+  FOR (int j = 0, j < width - 2, j++) THEN
+    FOR (int h = 0, j < width, h++) THEN
+      if (h == 0 || h == width - 1) THEN
+        PRINT "*"
+      ELSE
+        PRINT " "
+      END IF
+      PRINT " "
+    PRINTLINE
+  END FOR
+  FOR (int k = 0, k < width, k++) THEN
+    PRINT "* "
+  END FOR
+END MAIN

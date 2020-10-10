@@ -1,0 +1,25 @@
+//Task: Assignment3B
+//Author: Michael Lees
+
+MAIN
+  CREATE Num1 (INT)
+  CREATE Num2 (INT)
+  CREATE Answer (INT)
+  CREATE Operator (STRING)
+  PRINT "Enter the first number: "
+  READ Num1
+  PRINT "Enter the second number: "
+  READ Num2
+  PRINT "Enter the operator to apply: "
+  READ Operator
+  SWITCH (Operator)
+    CASE "+":
+      Answer = Num1 + Num2
+    CASE "-":
+      ANSWER = Num1 - Num2
+    CASE "*":
+      ANSWER = Num1 * Num2
+    CASE "/":
+      ANSWER = Num1 / Num2
+  PRINT Answer
+END MAIN

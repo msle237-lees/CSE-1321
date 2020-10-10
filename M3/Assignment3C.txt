@@ -1,0 +1,33 @@
+//Task: Assignment3C
+//Author: Michael Lees
+
+MAIN
+  CREATE PartySize (INT)
+  CREATE BillCost  (INT)
+  CREATE PercentageIncrease (INT)
+  CREATE FinalBill (INT)
+  CREATE Question (STRING)
+  CREATE Tip (INT)
+  CREATE FinalCost (INT)
+  PRINT "How many people in your party? "
+  READ PartySize
+  PRINT "What is the total cost of your bill? "
+  READ BillCost
+  IF (PartySize > = 6) THEN
+    PercentageIncrease = (BillCost * 18) / 100
+  ELSE
+    PercentageIncrease = 0
+  ENDIF
+  FinalBill = BillCost + PercentageIncrease
+  PRINT "Your bill is $" + FinalBill
+  PRINT "Would you like to include an additional tip (Y/N)? "
+  READ Question
+  IF (Question = Y) THEN
+    PRINT "How much? "
+    READ Tip
+  ELSE
+    Tip = 0
+  ENDIF
+  FinalCost = FinalBill + Tip
+  PRINT "Total bill is: $" + FinalCost
+END MAIN

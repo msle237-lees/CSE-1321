@@ -1,0 +1,44 @@
+// Assignment 8A
+
+MAIN
+  PRINT "Enter the number of years: "
+  CREATE nomyears = INPUT
+  PRINT "Enter the starting year: "
+  CREATE styear = INPUT
+  CREATE years with size nomyears (array)
+  CREATE stat with size nomyears (array)
+  years[0] = styear
+  FOR (int i = 1, i < nomyears, i++) THEN
+    years[i] = years[i-1] + 1
+  END FOR
+  FOR (int j = 0, j < nomyears, j++) THEN
+    PRINT "Enter stat for year " + years[j] + ": "
+    stat[j] = INPUT
+  END FOR
+  CREATE largest = -1 (INT)
+  FOR (int h = 0, h < stat.length, h++) THEN
+    if (stat[h] > largest) THEN
+      largest = stat[h]
+    END IF
+  END FOR
+  CREATE beststat = -1
+  FOR (int k = 0, k < stat.length, k++) THEN
+    if (stat[k] == largest) THEN
+      beststat = k
+    END IF
+  END FOR
+  PRINT "Best stat was " + stat[beststat] + " in the year " + years[beststat]
+  CREATE smallest = 1000
+  FOR (int o = 0, o < stat.length, o++) THEN
+    IF (stat[o] < smallest) THEN
+      smallest = stat[o]
+    END IF
+  END FOR
+  CREATE worststat = -1
+  FOR (int u = 0, u < stat.length, u++) THEN
+    IF (stat[u] == smallest) THEN
+      worststat = stat[u]
+    END IF
+  END FOR
+  PRINT "Worst stat was " + stat[worststat] + " in the year " + years[worststat]
+END MAIN

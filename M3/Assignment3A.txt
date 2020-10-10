@@ -1,0 +1,18 @@
+//Task: Assignment3A
+//Author: Michael Lees
+
+MAIN
+  CREATE Name1 (STRING)
+  CREATE Name2 (STRING)
+  PRINT "Enter guest 1: "
+  READ Name1
+  PRINT "Enter guest 2: "
+  READ Name2
+  IF (Name1 = "Taylor" AND Name2 = "Fernando") THEN
+    PRINT "Your party is ruined and another bad pop song will be written."
+  ELSE IF (Name1 = "Fernando" AND Name2 = "Taylor") THEN
+    PRINT "Your party is ruined and another bad pop song will be written."
+  ELSE
+    PRINT "Your party was a hit!"
+  ENDIF
+END MAIN

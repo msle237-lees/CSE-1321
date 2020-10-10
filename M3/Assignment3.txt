@@ -1,0 +1,80 @@
+//Task: Assignment3A
+//Author: Michael Lees
+
+MAIN
+  CREATE Name1 (STRING)
+  CREATE Name2 (STRING)
+  PRINT "Enter guest 1: "
+  READ Name1
+  PRINT "Enter guest 2: "
+  READ Name2
+  IF (Name1 = "Taylor" AND Name2 = "Fernando") THEN
+    PRINT "Your party is ruined and another bad pop song will be written."
+  ELSE IF (Name1 = "Fernando" AND Name2 = "Taylor") THEN
+    PRINT "Your party is ruined and another bad pop song will be written."
+  ELSE
+    PRINT "Your party was a hit!"
+  ENDIF
+END MAIN
+
+
+//Task: Assignment3B
+//Author: Michael Lees
+
+MAIN
+  CREATE Num1 (INT)
+  CREATE Num2 (INT)
+  CREATE Answer (INT)
+  CREATE Operator (STRING)
+  PRINT "Enter the first number: "
+  READ Num1
+  PRINT "Enter the second number: "
+  READ Num2
+  PRINT "Enter the operator to apply: "
+  READ Operator
+  IF (Operator = "+") THEN
+    Answer = Num1 + Num2
+  ELSE IF (Operator = "-") THEN
+    Answer = Num1 - Num2
+  ELSE IF (Operator = "*")
+    Answer = Num1 * Num2
+  ELSE IF (Operator = "/")
+    Answer = Num1 / Num2
+  ENDIF
+  PRINT Answer
+END MAIN
+
+
+//Task: Assignment3C
+//Author: Michael Lees
+
+MAIN
+  CREATE PartySize (INT)
+  CREATE BillCost  (INT)
+  CREATE PercentageIncrease (INT)
+  CREATE FinalBill (INT)
+  CREATE Question (STRING)
+  CREATE Tip (INT)
+  CREATE FinalCost (INT)
+  PRINT "How many people in your party? "
+  READ PartySize
+  PRINT "What is the total cost of your bill? "
+  READ BillCost
+  IF (PartySize > = 6) THEN
+    PercentageIncrease = (BillCost * 18) / 100
+  ELSE
+    PercentageIncrease = 0
+  ENDIF
+  FinalBill = BillCost + PercentageIncrease
+  PRINT "Your bill is $" + FinalBill
+  PRINT "Would you like to include an additional tip (Y/N)? "
+  READ Question
+  IF (Question = Y) THEN
+    PRINT "How much? "
+    READ Tip
+  ELSE
+    Tip = 0
+  ENDIF
+  FinalCost = FinalBill + Tip
+  PRINT "Total bill is: $" + FinalCost
+END MAIN
