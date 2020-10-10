@@ -19,39 +19,25 @@ class Assignment5B {
       System.out.print("Enter stat for year " + years[j] + ": ");
       stat[j] = scan.nextInt();
     }
-    String string_of_years = Arrays.toString(years)
-            .replace(",", "|")
-            .replace("", "")
-            .replace(" ", "")
-            .replace("[", "")
-            .replace("]", "|");
-    String string_of_stat = Arrays.toString(stat)
-            .replace(",", "|")
-            .replace("", "")
-            .replace(" ", "")
-            .replace("[", "")
-            .replace("]", "|");
-    System.out.println(string_of_years);
-    System.out.println(string_of_stat);
     int[] sorted_stat = new int[nomyears];
     for (int k = 0; k < nomyears; k++) {
       sorted_stat[k] = stat[k];
     }
     Arrays.sort(sorted_stat);
-    String string_of_sorted_stat = Arrays.toString(sorted_stat)
+    int[] sorted_years = new int[nomyears];
+    for (int n = 0; n < nomyears; n++) {
+      for (int m = 0; m < nomyears; m++) {
+        if (sorted_stat[n] == stat[m]) {
+          sorted_years[n] = years[m];
+        }
+      }
+    }
+    String string_of_sorted_years = Arrays.toString(sorted_years)
             .replace(",", "|")
             .replace("", "")
             .replace(" ", "")
             .replace("[", "")
             .replace("]", "|");
-    System.out.println(string_of_sorted_stat);
-    int[] sorted_years = new int[nomyears];
-    for (int n = 0; n < nomyears; n++) {
-      for (int m = 0; m < nomyears; m++) {
-        if (sorted_stat[n] == stat[m]) {
-          
-        }
-      }
-    }
+    System.out.println(string_of_sorted_years);
   }
 }

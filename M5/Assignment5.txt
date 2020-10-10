@@ -1,5 +1,8 @@
-// Assignment 8A
+// Michael Lees
+// Date 10 - 10 - 2020
+// Assignment 5
 
+// Assignment 5A
 MAIN
   PRINT "Enter the number of years: "
   CREATE nomyears = INPUT
@@ -41,4 +44,31 @@ MAIN
     END IF
   END FOR
   PRINT "Worst stat was " + stat[worststat] + " in the year " + years[worststat]
+END MAIN
+
+// Assignment 5B
+MAIN
+  PRINT "Enter the number of years: "
+  READ nomyears
+  PRINT "Enter the starting year: "
+  READ styear
+  CREATE years (array)
+  CREATE stat = (array)
+  years[0] = styear
+  FOR (int i = 0, i < nomyears, i++) THEN
+    years[i] = years[i-1] + 1
+  END FOR
+  FOR (int j = 0, j < nomyears, j++) THEN
+    PRINT "Enter stat for year " + years[j] + ": "
+    READ stat[j]
+  END FOR
+  CREATE sorted_years (array)
+  FOR (int n = 0, n < nomyears, n++) THEN
+    FOR (int m = 0, m < nomyears, m++) THEN
+      IF (sorted_years[n] == stat[m]) THEN
+        sorted_years[n] = years[m]
+      END IF
+    END FOR
+  END FOR
+  PRINT sorted_years
 END MAIN
