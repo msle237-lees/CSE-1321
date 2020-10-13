@@ -16,9 +16,9 @@ class Lab9B {
   public static void printArray(int[] arr) {
     String string_of_arr = Arrays.toString(arr)
             .replace(",", "|")
-            .replace("", "")
-            .replace("[", "")
-            .replace("]", "|");
+            .replace(" ", "")
+            .replace("[", "|")
+            .replace("]", "");
     System.out.println(string_of_arr);
   }
   public static void printSum(int[] arr) {
@@ -26,7 +26,7 @@ class Lab9B {
     for (int p = 0; p < arr.length; p++) {
       sum = sum + arr[p];
     }
-    System.out.println("Sum of arr = " + sum);
+    System.out.println(sum);
   }
   public static void resArray(int[] arr) {
     for (int l = 0; l < arr.length; l++) {
